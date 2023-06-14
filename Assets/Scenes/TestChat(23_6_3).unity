@@ -17648,6 +17648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981179029fbac3e45add40aa7e96e38e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  apiKey: 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
   ChatSystemReturnMessage: {fileID: 874497330}
 --- !u!4 &2143598215
 Transform:
