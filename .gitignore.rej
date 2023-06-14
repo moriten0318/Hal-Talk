@@ -1,0 +1,7 @@
+diff a/.gitignore b/.gitignore	(rejected hunks)
+@@ -70,3 +70,5 @@
+ # Temporary auto-generated Android Assets
+ /[Aa]ssets/[Ss]treamingAssets/aa.meta
+ /[Aa]ssets/[Ss]treamingAssets/aa/*
++Assets/script/Env.cs
++Assets/script/Env.cs.meta

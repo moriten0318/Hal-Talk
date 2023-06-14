@@ -53,7 +53,12 @@ public class GPTChat : MonoBehaviour
         role = "system",
         content = "あなたはバーチャル世界に存在している教師です。"
     };
+<<<<<<< HEAD
     public string apiKey = "";/// GPTのAPIキー
+=======
+    private Env _env;
+    private string apiKey;/// GPTのAPIキーを格納しておくための変数
+>>>>>>> 7ca6d13684cac19b20508189135c85e7d20259cc
     private List<MessageModel> communicationHistory = new();///これまでのメッセージを格納しておくためのリスト
 
     public GameObject ChatSystemReturnMessage;
@@ -61,6 +66,9 @@ public class GPTChat : MonoBehaviour
     void Start()
     {
         communicationHistory.Add(assistantModel);///初期設定をcommunicationHistoryに渡す
+
+        _env = GameObject.Find("Env").GetComponent<Env>();
+        apiKey = _env.apikey;///apiキーを渡す
     }
 
     private void Communication(string newMessage, Action<MessageModel> result)
