@@ -53,7 +53,7 @@ public class GPTChat : MonoBehaviour
         role = "system",
         content = "あなたはバーチャル世界に存在している教師です。"
     };
-    private readonly string apiKey = "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";/// GPTのAPIキー
+    private readonly string apiKey = "";/// GPTのAPIキー
     private List<MessageModel> communicationHistory = new();///これまでのメッセージを格納しておくためのリスト
 
     public GameObject ChatSystemReturnMessage;
