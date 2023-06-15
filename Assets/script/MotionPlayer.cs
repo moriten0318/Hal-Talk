@@ -11,12 +11,21 @@ public class MotionPlayer : MonoBehaviour
         _motionController = GetComponent<CubismMotionController>();
     }
 
-    public void PlayMotion(AnimationClip animation)///このメソッドの引数にAnimationClipを渡せば動くよ
+    public void Play_roopMotion(AnimationClip animation)///このメソッドの引数にAnimationClipを渡せば動くよ
     {
-        if ((_motionController == null) || (animation == null))
+        if ((_motionController == null) || (animation == null))//モーションココントローラーやアニメが未指定ならそのまま返す
         {
             return;
         }
-        _motionController.PlayAnimation(animation, isLoop: true);
+        _motionController.PlayAnimation(animation, isLoop: true);//isloop=trueならループ再生を有効にする
+    }
+
+    public void Play_Motion(AnimationClip animation)///引数にAnimationClipを渡せば動くよ
+    {
+        if ((_motionController == null) || (animation == null))//モーションココントローラーやアニメが未指定ならそのまま返す
+        {
+            return;
+        }
+        _motionController.PlayAnimation(animation, isLoop: false);//isloop=falseならループ再生を無効にする
     }
 }
